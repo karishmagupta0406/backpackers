@@ -9,27 +9,32 @@
  * Main module of the application.
  */
 angular
-  .module('getStartedApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngTouch',
-    'ui.router'
-  ])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider  
-      .state('main', {
-        url: '/',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .state('about', {
-        url:'/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
+    .module('getStartedApp', [
+        'ngAnimate',
+        'ngCookies',
+        'ngResource',
+        'ngSanitize',
+        'ngTouch',
+        'ui.router'
+    ])
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'module/home/home.html',
+                controller: 'homeCtrl'
+            })
+            .state('packages', {
+                url: '/packages',
+                templateUrl: 'module/packages/packages.html',
+                controller: 'packagesCtrl'
+            })
+             .state('contact', {
+                url: '/contact',
+                templateUrl: 'module/contact/contact.html',
+                 controller: 'contactCtrl'
+             })
 
-      $urlRouterProvider.otherwise('/');
-  
-  });
+        $urlRouterProvider.otherwise('/');
+
+    });
