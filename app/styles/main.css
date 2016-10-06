@@ -138,6 +138,11 @@ body {
     margin-top: 0;
  }
 
+.tile__title{
+
+  margin-top: -41px;
+  text-decoration: none;
+}
 
 
 
@@ -200,6 +205,7 @@ body {
 #banner a {
     color: #51BAA4;
     margin-right: 45px;
+
 }
 
 #banner strong,
@@ -258,6 +264,7 @@ body {
 @media screen and (max-width: 1680px) {
     #banner {
         padding: 11em 0 9em 0;
+        margin-top: 61px;
     }
 }
 
@@ -346,3 +353,4 @@ input, .form-control {
     box-shadow: none;
     margin-top: 10px;
 }
+
